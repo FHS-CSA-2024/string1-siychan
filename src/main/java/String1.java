@@ -155,7 +155,7 @@ public class String1
      * middleThree("solving") → "lvi"
      */
     public String middleThree(String str) {
-        return unimplemented;
+        return str.substring((str.length() / 2) - 1, (str.length() / 2) + 2);
     }
 
     /*
