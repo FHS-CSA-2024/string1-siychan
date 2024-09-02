@@ -100,7 +100,7 @@ public class String1
      * firstTwo("ab") → "ab"
      */
     public String firstTwo(String str) {
-        return unimplemented;
+        return str.substring(0,2);
     }
 
     /*
