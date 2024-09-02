@@ -166,7 +166,7 @@ public class String1
      * extraFront("H") → "HHH"
      */
     public String extraFront(String str) {
-        return unimplemented;
+        return str.substring(0,2) + str.substring(0,2) + str.substring(0,2);
     }
 
     /*
