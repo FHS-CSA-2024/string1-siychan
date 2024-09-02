@@ -133,7 +133,18 @@ public class String1
      * comboString("aaa", "b") → "baaab"
      */
     public String comboString(String a, String b) {
-        return unimplemented;
+        String longer = "";
+        String shorter = "";
+        if (a.length() > b.length())
+        {
+            longer = a;
+            shorter = b;
+        }
+        else{
+            longer = b;
+            shorter = a;
+        }
+        return shorter + longer + shorter;
     }
 
     /*
