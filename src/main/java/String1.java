@@ -76,7 +76,7 @@ public class String1
      * makeOutWord("[[]]", "word") → "[[word]]"
      */
     public String makeOutWord(String out, String word) {
-        return unimplemented;
+        return out.substring(0,2) + word + out.substring(2,4);
     }
 
     /*
