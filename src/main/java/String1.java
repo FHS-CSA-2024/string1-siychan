@@ -50,7 +50,7 @@ public class String1
      * makeAbba("What", "Up") → "WhatUpUpWhat"
      */
     public String makeAbba(String a, String b) {
-        return unimplemented;
+        return a + b + b + a;
     }
 
     /*
