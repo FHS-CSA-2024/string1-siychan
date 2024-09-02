@@ -62,7 +62,7 @@ public class String1
      * makeTags("cite", "Yay") → "<cite>Yay</cite>"
      */
     public String makeTags(String tag, String word) {
-        return unimplemented;
+        return "<" + tag + ">" + word + "</" + tag + ">";
     }
 
     /*
