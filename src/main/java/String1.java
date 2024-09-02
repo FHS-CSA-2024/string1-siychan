@@ -110,7 +110,7 @@ public class String1
      * firstHalf("abcdef") → "abc"
      */
     public String firstHalf(String str) {
-        return unimplemented;
+        return str.substring(0, (str.length() / 2));
     }
 
     /*
@@ -121,7 +121,7 @@ public class String1
      * withoutEnd("coding") → "odin"
      */
     public String withoutEnd(String str) {
-        return unimplemented;
+        return str.substring(1,str.length() - 1);
     }
 
     /*
