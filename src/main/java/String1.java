@@ -235,7 +235,8 @@ public class String1
             output += b.substring(b.length()-a.length(), b.length());
             output += a;
         }
-        return output;    }
+        return output;    
+    }
 
     /*
      * Given a string, if the first or last chars are 'x', return the string without those 'x' chars, 
@@ -245,7 +246,14 @@ public class String1
      * withoutX("Hxix") → "Hxi"
      */
     public String withoutX(String str) {
-        return unimplemented;
+        String output = "";
+        if (str.charAt(str.length()-1) == ('x')){
+            output = str.substring(0, str.length()-1);
+        }
+        if (str.charAt(0) == ('x')){
+            output = output.substring(1, output.length());
+        }
+        return output;
     }
 
     /*
