@@ -266,7 +266,20 @@ public class String1
      * deFront("away") → "aay"
      */
     public String deFront(String str) {    
-        return unimplemented;
+        String output = "";
+        if (str.charAt(0) != 'a'){
+            output = str.substring(1, str.length());
+            if (output.charAt(0) != 'b'){
+                output = output.substring(1, output.length());
+            }
+        }
+        else{
+            output = str;
+            if (output.charAt(1) != 'b'){
+                output = output.substring(0,1) + output.substring(2,output.length());
+            }
+        }
+        return output;
     }
 
 }
