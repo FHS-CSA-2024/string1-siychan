@@ -12,6 +12,7 @@ public class String1
         System.out.println(s.makeOutWord("<<>>", "Yay"));
         System.out.println(s.extraEnd("Hello"));
         System.out.println(s.firstTwo("Hello"));
+        //System.out.println(s.firstHalf("WooHoo"));
         System.out.println(s.withoutEnd("Hello"));
         System.out.println(s.comboString("hi", "Hello"));
         System.out.println(s.middleThree("Candy"));
@@ -166,7 +167,11 @@ public class String1
      * extraFront("H") → "HHH"
      */
     public String extraFront(String str) {
-        return str.substring(0,2) + str.substring(0,2) + str.substring(0,2);
+        int index = 2;
+        if (str.length() < 2){
+            index = 1;
+        }
+        return str.substring(0,index) + str.substring(0,index) + str.substring(0,index);
     }
 
     /*
@@ -200,24 +205,29 @@ public class String1
     /*
      * Given two strings, append them together (known as "concatenation") and return the result. 
      * However, if the concatenation creates a double-char, then omit one of the chars, 
-     * 	so "abc" and "cat" yields "abcat".
+     *     so "abc" and "cat" yields "abcat".
      * conCat("abc", "cat") → "abcat"
      * conCat("dog", "cat") → "dogcat"
      * conCat("abc", "") → "abc"
      */
     public String conCat(String a, String b) {
-        if (a.substring(a.length()-1,a.length()).equals(a.substring(b.length()-1,b.length()))){
-            return a.substring(0,a.length()-1) + b;
+        if (a.length() != 0 && b.length() != 0){
+            if (a.charAt(a.length()-1) == b.charAt(0)){
+                return a.substring(0,a.length()-1) + b;
+            }
+            else{
+                return a + b;
+            }
         }
         else{
             return a + b;
-        }    
+        }
     }
 
     /*
      *Given two strings, append them together (known as "concatenation") and return the result. 
      *However, if the strings are different lengths, omit chars from the longer string 
-     *	so it is the same length as the shorter string. 
+     *    so it is the same length as the shorter string. 
      *So "Hello" and "Hi" yield "loHi". 
      *The strings may be any length.
      *minCat("Hello", "Hi") → "loHi"
@@ -232,10 +242,10 @@ public class String1
             output += b;
         }
         else{
-            output += b.substring(b.length()-a.length(), b.length());
             output += a;
+            output += b.substring(b.length()-a.length(), b.length());
         }
-        return output;    
+        return output;
     }
 
     /*
@@ -246,9 +256,9 @@ public class String1
      * withoutX("Hxix") → "Hxi"
      */
     public String withoutX(String str) {
-        String output = "";
+        String output = str;
         if (str.charAt(str.length()-1) == ('x')){
-            output = str.substring(0, str.length()-1);
+            output = output.substring(0, output.length()-1);
         }
         if (str.charAt(0) == ('x')){
             output = output.substring(1, output.length());
@@ -265,7 +275,7 @@ public class String1
      * deFront("java") → "va"
      * deFront("away") → "aay"
      */
-    public String deFront(String str) {    
+    public String deFront(String str) { 
         String output = "";
         if (str.charAt(0) != 'a'){
             output = str.substring(1, str.length());
