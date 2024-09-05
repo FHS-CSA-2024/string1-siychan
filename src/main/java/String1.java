@@ -189,7 +189,12 @@ public class String1
      * hasBad("xxbadxx") → false
      */
     public boolean hasBad(String str) {
-        return false;
+        if (str.substring(0,3).equals("bad") || str.substring(1,4).equals("bad")){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /*
