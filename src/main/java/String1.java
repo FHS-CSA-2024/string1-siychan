@@ -225,8 +225,17 @@ public class String1
      *minCat("java", "Hello") → "javaello"
      */
     public String minCat(String a, String b) {
-        return unimplemented;
-    }
+        String output = "";
+        if (a.length() > b.length())
+        {
+            output += a.substring(a.length()-b.length(), a.length());
+            output += b;
+        }
+        else{
+            output += b.substring(b.length()-a.length(), b.length());
+            output += a;
+        }
+        return output;    }
 
     /*
      * Given a string, if the first or last chars are 'x', return the string without those 'x' chars, 
