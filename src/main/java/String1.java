@@ -206,7 +206,12 @@ public class String1
      * conCat("abc", "") → "abc"
      */
     public String conCat(String a, String b) {
-        return unimplemented;
+        if (a.substring(a.length()-1,a.length()).equals(a.substring(b.length()-1,b.length()))){
+            return a.substring(0,a.length()-1) + b;
+        }
+        else{
+            return a + b;
+        }    
     }
 
     /*
